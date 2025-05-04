@@ -172,7 +172,7 @@ Karena pengguna lanjut usia cenderung memakai lebih banyak minyak, Sarah dapat :
 - Menyusun kampanye komunikasi yang mengutamakan kenyamanan dan keamanan.
 
 # Soal 2
-## Bagian SARAH – Membangun & Menyimpan Model
+## Bagian Sarah – Membangun & Menyimpan Model
 
 ```{r}
 # Menyiapkan Data
@@ -188,7 +188,7 @@ saveRDS(model, file = "model_heatingoil.rds")
 
 ```
 
-## Bagian MARKETER – Membaca Model & Prediksi
+## Bagian Marketer – Membaca Model & Prediksi
 
 ```{r}
 # Membaca Model
