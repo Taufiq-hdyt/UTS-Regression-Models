@@ -11,7 +11,7 @@
 
 <meta name="author" content="Muhammad Taufiq Hidayat-A3202300042" />
 
-<meta name="date" content="2025-05-04" />
+<meta name="date" content="2025-05-05" />
 
 <title>UTS Regressions Models</title>
 
@@ -2771,7 +2771,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">UTS Regressions Models</h1>
 <h4 class="author">Muhammad Taufiq Hidayat-A3202300042</h4>
-<h4 class="date">2025-05-04</h4>
+<h4 class="date">2025-05-05</h4>
 
 </div>
 
@@ -2795,22 +2795,22 @@ text-align: justify}
 </div>
 <div id="pilih-kolom-yang-dibutuhkan" class="section level3">
 <h3>3. Pilih kolom yang dibutuhkan</h3>
-<p>subset_data &lt;- data[, c(“Heating_Oil”, “Insulation”,
+<p>data_korelasi &lt;- data[, c(“Heating_Oil”, “Insulation”,
 “Temperature”, “Num_Occupants”, “Avg_Age”, “Home_Size”)]</p>
 </div>
 <div id="hitung-korelasi" class="section level3">
 <h3>4. Hitung korelasi</h3>
-<p>corr_matrix &lt;- cor(subset_data, use = “complete.obs”)</p>
+<p>matriks_korelasi &lt;- cor(data_korelasi, use = “complete.obs”)</p>
 </div>
 <div id="tampilkan-matrix-korelasi" class="section level3">
 <h3>5. Tampilkan matrix korelasi</h3>
-<p>print(corr_matrix)</p>
+<p>print(matriks_korelasi)</p>
 </div>
 <div id="buat-heatmap" class="section level3">
 <h3>6. Buat heatmap</h3>
-<p>ggcorrplot(corr_matrix, method = “circle”, type = “lower”, lab =
-TRUE, colors = c(“blue”, “white”, “red”), title = “Correlation Matrix of
-Heating Oil and Other Variables”)</p>
+<p>ggcorrplot(matriks_korelasi, method = “square”, type = “lower”, lab =
+TRUE, colors = c(“blue”, “white”, “red”), title = “Korelasi Konsumsi
+Minyak Pemanas”, ggtheme = ggplot2::theme_minimal())</p>
 <pre class="r"><code>library(ggcorrplot)</code></pre>
 <pre><code>## Warning: package &#39;ggcorrplot&#39; was built under R version 4.4.3</code></pre>
 <pre><code>## Loading required package: ggplot2</code></pre>

@@ -35,21 +35,22 @@ library(readr)
 data <- read.csv("HeatingOil.csv")
 
 ### 3. Pilih kolom yang dibutuhkan
-subset_data <- data[, c("Heating_Oil", "Insulation", "Temperature", "Num_Occupants", "Avg_Age", "Home_Size")]
+data_korelasi <- data[, c("Heating_Oil", "Insulation", "Temperature", "Num_Occupants", "Avg_Age", "Home_Size")]
 
 ### 4. Hitung korelasi
-corr_matrix <- cor(subset_data, use = "complete.obs")
+matriks_korelasi <- cor(data_korelasi, use = "complete.obs")
 
 ### 5. Tampilkan matrix korelasi
-print(corr_matrix)
+print(matriks_korelasi)
 
 ### 6. Buat heatmap
-ggcorrplot(corr_matrix, 
-           method = "circle", 
+ggcorrplot(matriks_korelasi, 
+           method = "square", 
            type = "lower", 
            lab = TRUE, 
            colors = c("blue", "white", "red"),
-           title = "Correlation Matrix of Heating Oil and Other Variables")
+           title = "Korelasi Konsumsi Minyak Pemanas",
+           ggtheme = ggplot2::theme_minimal())
 
 ```{r}
 library(ggcorrplot)
